@@ -6,6 +6,7 @@ import com.design.patterns.creational.abstarct.factory.tata.Tata;
 import com.design.patterns.creational.builder.AppleLaptop;
 import com.design.patterns.creational.builder.Laptop;
 import com.design.patterns.creational.factoryMethod.*;
+import com.design.patterns.creational.prototype.Dress;
 import com.design.patterns.creational.singleton.SingleWithMultiThread;
 import com.design.patterns.creational.singleton.SingleWithNonThread;
 
@@ -66,5 +67,11 @@ public class Main {
         Laptop basicLaptop = new AppleLaptop().constructLaptopWithoutBrand();
         System.out.println("Get the laptop brand : " + basicLaptop.brand());
         System.out.println("Get the laptop model : " + basicLaptop.modelName());
+
+        //Prototype pattern
+        Dress dress1 = new Dress("BARCODE_123","Red", "10");
+        Dress dress2 = dress1.clone();
+        //Printing the copied object
+        System.out.println("Dress-2 Barcode :" + dress2.barcode() + " Dress-2 Colour :" + dress2.colour() + " Dress-2 Size :" + dress2.size());
     }
 }
