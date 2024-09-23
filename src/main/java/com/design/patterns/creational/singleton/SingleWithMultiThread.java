@@ -1,7 +1,5 @@
 package com.design.patterns.creational.singleton;
 
-import java.util.concurrent.atomic.AtomicReference;
-
 public class SingleWithMultiThread {
 
     //The volatile keyword can be used on the FIELD variable declaration ONLY - no class, no parameters, no methods no local var
@@ -9,7 +7,7 @@ public class SingleWithMultiThread {
     //MUTUAL EXCLUSION : Only 1 thread can execute a BLOCK of code and can do update to the shared data.
     //MOST IMPORTANT CONCEPT : Volatile variables are NEVER CACHED, so always read from the MAIN MEMORY.
     private static volatile SingleWithMultiThread instance;
-    private String data;
+    private final String data;
 
     SingleWithMultiThread(String data) {
         this.data = data;

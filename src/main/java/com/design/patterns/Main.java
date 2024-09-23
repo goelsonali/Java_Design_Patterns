@@ -48,6 +48,11 @@ public class Main {
         Thread.sleep(200);
         t2.start();
 
+        //Output - As the first thread instantiated the singleton class -
+        // SingleWithMultiThread for any other thread it will refer to the thread1 instance.
+        //Thread 1 invoking instance
+        //Thread 1 invoking instance
+
         //Abstract Factory Example
         Company brandFord = new Ford();
         Company brandTata = new Tata();
